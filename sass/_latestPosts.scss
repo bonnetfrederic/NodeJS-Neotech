@@ -1,0 +1,53 @@
+#latestPosts {
+  h2 {
+    color: $titleColor;
+  }
+  #latestPostsContainer {
+    @include flex-col-center;
+    .post {
+      margin: 20px 0;
+      display: grid;
+      grid-template-columns: 33% 67%;
+      grid-template-rows: 1fr;
+      grid-template-areas: 
+        "img txt"
+        ;
+      gap: 10px;
+      .postImg {
+        grid-area: img;
+        width: 100%;
+      }
+      .postInfo {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        grid-area: txt;
+        h3 { 
+          color: red;
+        }
+        .postSummary {
+          font-size: 1.5rem;
+          margin-bottom: 8px;
+        }
+        .dateAndAuthor {
+          span {
+            color: grey;
+            font-size: 0.8rem;
+          }
+        }
+        .postText {
+          font-size: 1rem;
+          margin-top: 8px;
+        }
+      }
+    }
+    @for $i from 1 through 5 { 
+      #post#{$i} { 
+        #postImg#{$i} {
+          background: url("../img/list_post_img_#{$i}.jpg") center/cover;
+        }
+      }
+    }
+  }
+}

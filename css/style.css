@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+#latestPosts h2 {
+  color: red; }
+
+#latestPosts #latestPostsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  #latestPosts #latestPostsContainer .post {
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: 33% 67%;
+    grid-template-rows: 1fr;
+    grid-template-areas: "img txt";
+    gap: 10px; }
+    #latestPosts #latestPostsContainer .post .postImg {
+      grid-area: img;
+      width: 100%; }
+    #latestPosts #latestPostsContainer .post .postInfo {
+      width: 95%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      grid-area: txt; }
+      #latestPosts #latestPostsContainer .post .postInfo h3 {
+        color: red; }
+      #latestPosts #latestPostsContainer .post .postInfo .postSummary {
+        font-size: 1.5rem;
+        margin-bottom: 8px; }
+      #latestPosts #latestPostsContainer .post .postInfo .dateAndAuthor span {
+        color: grey;
+        font-size: 0.8rem; }
+      #latestPosts #latestPostsContainer .post .postInfo .postText {
+        font-size: 1rem;
+        margin-top: 8px; }
+  #latestPosts #latestPostsContainer #post1 #postImg1 {
+    background: url("../img/list_post_img_1.jpg") center/cover; }
+  #latestPosts #latestPostsContainer #post2 #postImg2 {
+    background: url("../img/list_post_img_2.jpg") center/cover; }
+  #latestPosts #latestPostsContainer #post3 #postImg3 {
+    background: url("../img/list_post_img_3.jpg") center/cover; }
+  #latestPosts #latestPostsContainer #post4 #postImg4 {
+    background: url("../img/list_post_img_4.jpg") center/cover; }
+  #latestPosts #latestPostsContainer #post5 #postImg5 {
+    background: url("../img/list_post_img_5.jpg") center/cover; }
